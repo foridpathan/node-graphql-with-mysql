@@ -1,0 +1,39 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Mutation {
+  addRecipe(fields: RecipeInputs): RecipeTypes!
+}
+
+type Query {
+  getRecipes: [RecipeTypes]!
+}
+
+input RecipeInputs {
+  author: String!
+  createdAt: String
+  deletedAt: String
+  instruction: String!
+  meta: [String!]!
+  slug: String!
+  title: String!
+  updatedAt: String
+}
+
+type RecipeMetadata {
+  cookingTime: String
+}
+
+type RecipeTypes {
+  author: String!
+  createdAt: String
+  deletedAt: String
+  id: Int!
+  instruction: String!
+  meta: RecipeMetadata
+  slug: String!
+  title: String!
+  updatedAt: String
+}

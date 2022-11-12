@@ -1,0 +1,26 @@
+type RecipeMetadata {
+  cookingTime: String
+}
+
+type RecipeTypes {
+  id: Int!
+  title: String!
+  slug: String!
+  instruction: String!
+  author: String!
+  meta: RecipeMetadata
+  createdAt: String
+  updatedAt: String
+  deletedAt: String
+}
+
+input RecipeInputs {
+  title: String!
+  slug: String!
+  instruction: String!
+  author: String!
+  meta: [String!]!
+  createdAt: String
+  updatedAt: String
+  deletedAt: String
+}
