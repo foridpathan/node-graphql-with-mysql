@@ -8,7 +8,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import { readFileSync } from "fs";
 
-import dbInit from "./models/init.js";
+import dbInit from "./mysql/init.js";
 
 import resolvers from "./resolvers/index.js";
 const typeDefs = readFileSync("./src/generated/schema.graphql", {

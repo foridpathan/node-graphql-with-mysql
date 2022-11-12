@@ -1,5 +1,5 @@
 import { MutationResolvers } from "../../generated/typings";
-import { Recipe } from "../../models/models/index.js";
+import { Recipe } from "../../mysql/models/index.js";
 
 const mutations: MutationResolvers = {
   Mutation: {
